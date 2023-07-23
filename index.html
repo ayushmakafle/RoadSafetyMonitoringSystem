@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Road Safety Monitoring System</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <div class="header-top">
+    <div class="header-top-right">
+      <span> ☎ +977-1-5970646, 4211917</span>
+      &nbsp;&nbsp;
+      <span>📩 Official: info@.gov.np</span>&nbsp;&nbsp;
+      <span>| Technical Support: govnp@rsms.gov.np</span>
+    </div>
+  </div>
+  <header class="header">
+    <nav class="navbar">
+      <div class="navbar-logo">
+        <img src="image/n.png" alt="Logo">
+      </div>
+      
+      <ul class="navbar-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="roadupdate.php">Road Condition</a></li>
+        <li><a href="login.html"><i class="far fa-user"></i></a></li>
+      </ul>
+      <div class="navbar-flag">
+        <img src="image/nepalflag.gif" alt="Nepal Flag">
+      </div>
+      </nav>
+    </header>
+    <div class="header-news">
+      <marquee behavior="scroll" direction="left">News Update: Road condition of nepal- Construction is going on road of Bhaktapur.</marquee>
+    </div>
+
+  <div class="content">
+    <h1>Welcome to Road Safety Monitoring System</h1>
+    <p>This website provides various features to assist in road safety management and related services.</p>
+
+    <div class="features">
+      <div class="feature">
+        <h2>Accident Reporting</h2>
+        <button onclick="goToAccidentReportForm()">Report Accident</button>
+      </div>
+      <div class="feature feature-emergency">
+        <h2>Emergency Assistance</h2>
+        <button onclick="window.location.href = 'emergency_assistance.html';">Emergency Assistance</button>
+      </div>
+
+      <div class="feature">
+        <h2>Driver Feedback</h2>
+        <button onclick="goToDriverFeedbackForm()">Submit Feedback</button>
+      </div>
+      <div class="feature">
+        <h2>Weather Alert</h2>
+        <button onclick="ShowWeatherAlert()">Get Weather Alerts</button>
+      </div>
+    </div>
+  </div>
+  <div id="weatherContainer" class="weather-container"></div>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <ul>
+        <li>
+          <h3>About Us</h3>
+          <p>Welcome to Road Safety Monitoring System! We are dedicated to ensuring the safety and well-being of road users by providing an advanced monitoring and reporting platform.</p>
+        </li>
+        <li>
+          <h3>Contact Us</h3>
+          <p>Have any questions or feedback? We would love to hear from you.</p>
+          <p>Email: <a href="mailto:info@roadsafetymonitoring.com" style="color: white;">info@roadsafetymonitoring.com</a></p>
+          <p>Phone: 9853729390</p>
+          <p>Address: Baluwatar, Kathmandu, Nepal</p>
+        </li>
+        <li>
+          <h3>Office Hours</h3>
+          <p>10:00 AM - 5:00 PM (Sunday to Thursday)</p>
+          <p>10:00 AM - 3:00 PM (Friday)</p>
+          <h5><a href="admin_login.php" style="text-decoration:none;color: aliceblue;"">Admin</a></h5>
+        </li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2023 Road Safety System. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+
+</html>

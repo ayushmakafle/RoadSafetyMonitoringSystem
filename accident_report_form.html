@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Accident Report Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f1f1f1;
+    }
+    
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    h1 {
+      text-align: center;
+      color:#005884;
+    }
+    
+    form {
+      margin-top: 20px;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    
+    input[type="text"],
+    input[type="number"],
+    input[type="datetime-local"],
+    textarea {
+      width: 100%;
+      padding: 8px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+    
+    textarea {
+      resize: vertical;
+      height: 100px;
+    }
+    
+    input[type="file"] {
+      margin-top: 5px;
+    }
+    
+    input[type="submit"] {
+      background-color: #cd4747;
+      color: #fff;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    
+    input[type="submit"]:hover {
+      background-color:#cd4747;
+    }
+    
+    /* Animation */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    
+    .container {
+      animation: fadeIn 0.5s;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Accident Report Form</h1>
+    
+    <form action="accident_report.php" method="POST" enctype="multipart/form-data" onsubmit="showAlert()">
+      <label for="ReportDateTime">Report Date and Time:</label>
+      <input type="datetime-local" id="ReportDateTime" name="ReportDateTime" required><br>
+      
+      <label for="Location">Location:</label>
+      <input type="text" id="Location" name="Location" autocomplete="off" required><br>
+      
+      <label for="Description">Description:</label>
+      <textarea id="Description" name="Description" autocomplete="off"></textarea><br>
+      
+      <label for="VehicleLicensePlate">Vehicle License Plate:</label>
+      <input type="text" id="VehicleLicensePlate" name="VehicleLicensePlate" autocomplete="off" required><br>
+      
+      <label for="VehicleType">Vehicle Type:</label>
+      <input type="text" id="VehicleType" name="VehicleType" autocomplete="off" required><br>
+      
+      <label for="VehicleColor">Vehicle Color:</label>
+      <input type="text" id="VehicleColor" name="VehicleColor" autocomplete="off" required><br>
+      
+      <label for="DriverName">Driver Name:</label>
+      <input type="text" id="DriverName" name="DriverName" autocomplete="off"><br>
+      
+      <label for="DriverContact">Driver Contact:</label>
+      <input type="text" id="DriverContact" name="DriverContact" autocomplete="off"><br>
+      
+      <label for="DriverLicense">Driver License:</label>
+      <input type="text" id="DriverLicense" name="DriverLicense" autocomplete="off"><br>
+      
+      <label for="WitnessName">Witness Name:</label>
+      <input type="text" id="WitnessName" name="WitnessName"autocomplete="off"><br>
+      
+      <label for="WitnessContact">Witness Contact:</label>
+      <input type="text" id="WitnessContact" name="WitnessContact" autocomplete="off"><br>
+      
+      <label for="ReporterName">Reporter Name:</label>
+      <input type="text" id="ReporterName" name="ReporterName"autocomplete="off"><br>
+      
+      <label for="ReporterContact">Reporter Contact:</label>
+      <input type="text" id="ReporterContact" name="ReporterContact" autocomplete="off"><br>
+      
+      <label for="Injuries">Injuries:</label>
+      <textarea id="Injuries" name="Injuries" autocomplete="off"></textarea><br>
+      
+      <label for="Damages">Damages:</label>
+      <textarea id="Damages" name="Damages" autocomplete="off"></textarea><br>
+      
+      <label for="Photos">Photos:</label>
+      <input type="file" id="Photos" name="Photos" autocomplete="off"><br>
+      
+     
+      <label for="AdditionalComments">Additional Comments:</label>
+      <textarea id="AdditionalComments" name="AdditionalComments" autocomplete="off"></textarea><br>
+      
+      <input type="submit" value="Submit Report">
+    </form>
+  </div>
+  
+  <script>
+    // Add animation to the form container
+    document.addEventListener("DOMContentLoaded", function() {
+      var container = document.querySelector(".container");
+      container.style.opacity = 0;
+      
+      setTimeout(function() {
+        container.style.opacity = 1;
+      }, 200);
+    });
+
+    function showAlert() {
+      alert("Accident report submitted successfully!");
+    }
+  </script>
+</body>
+</html>
